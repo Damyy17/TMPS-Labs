@@ -1,7 +1,8 @@
-package Lab2.ProjectCars;
+package Lab2.CarsBuilder;
 
 public class VehicleBuilder implements Builder{
     private String brand;
+    private String surnameBrand;
     private String type;
     private String color;
     private int horsePower;
@@ -10,6 +11,11 @@ public class VehicleBuilder implements Builder{
 
     public VehicleBuilder brand(String brand){
         this.brand = brand;
+        return this;
+    }
+
+    public VehicleBuilder surnameBrand(String surnameBrand){
+        this.surnameBrand = surnameBrand;
         return this;
     }
 
@@ -39,7 +45,7 @@ public class VehicleBuilder implements Builder{
     }
 
     public Vehicle build() {
-        return new Vehicle(brand, type, color, horsePower, maxSpeed, createdAt);
+        return new Vehicle(brand, surnameBrand, type, color, horsePower, maxSpeed, createdAt);
     }
 
     

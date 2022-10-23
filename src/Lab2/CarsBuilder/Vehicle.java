@@ -1,15 +1,17 @@
-package Lab2.ProjectCars;
+package Lab2.CarsBuilder;
 
 public class Vehicle {
     private final String brand;
+    private final String surnameBrand;
     private final String type;
     private final String color;
     private int horsePower;
     private int maxSpeed;
     private final String createdAt;
 
-    Vehicle(String brand, String type, String color, int horsePower, int maxSpeed, String createdAt){
+    Vehicle(String brand, String surnameBrand, String type, String color, int horsePower, int maxSpeed, String createdAt){
         this.brand = brand;
+        this.surnameBrand = surnameBrand;
         this.type = type;
         this.color = color;
         this.horsePower = horsePower;
@@ -17,9 +19,12 @@ public class Vehicle {
         this.createdAt = createdAt;
     }
 
-
     public String getBrand() {
         return this.brand;
+    }
+
+    public String getSurnameBrand() {
+        return this.surnameBrand;
     }
 
     public String getType() {
@@ -44,14 +49,12 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "{" +
-            " brand='" + getBrand() + "'" +
-            ", type='" + getType() + "'" +
-            ", color='" + getColor() + "'" +
-            ", horsePower='" + getHorsePower() + "'" +
-            ", maxSpeed='" + getMaxSpeed() + "'" +
-            ", createdAt='" + getCreatedAt() + "'" +
-            "}";
+        return brand + " " + surnameBrand + " specifications are " +
+                "type='" + type + '\'' +
+                ", color='" + color + '\'' +
+                ", horsePower=" + horsePower +
+                ", maxSpeed=" + maxSpeed +
+                ", createdAt='" + createdAt + '\'' +
+                '}';
     }
-
 }
