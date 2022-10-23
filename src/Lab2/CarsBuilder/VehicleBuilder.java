@@ -4,6 +4,7 @@ public class VehicleBuilder implements Builder{
     private String brand;
     private String surnameBrand;
     private String type;
+    private String engine;
     private String color;
     private int horsePower;
     private int maxSpeed;
@@ -21,6 +22,11 @@ public class VehicleBuilder implements Builder{
 
     public VehicleBuilder type(String type){
         this.type = type;
+        return this;
+    }
+
+    public VehicleBuilder engine(String engine){
+        this.engine = engine;
         return this;
     }
 
@@ -45,7 +51,7 @@ public class VehicleBuilder implements Builder{
     }
 
     public Vehicle build() {
-        return new Vehicle(brand, surnameBrand, type, color, horsePower, maxSpeed, createdAt);
+        return new Vehicle(brand, surnameBrand, type, engine, color, horsePower, maxSpeed, createdAt);
     }
 
     

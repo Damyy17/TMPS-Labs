@@ -8,6 +8,8 @@ public interface Builder {
 
     Builder type(String Type);
 
+    Builder engine(String engine);
+
     Builder color(String color);
     
     Builder horsePower(int horsePower);
